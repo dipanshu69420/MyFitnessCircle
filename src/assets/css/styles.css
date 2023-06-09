@@ -1,0 +1,352 @@
+
+
+
+.card{
+    color: white;
+    background-image: url("banner.png");
+    background-size: cover;
+	padding: 5rem 0 0rem;
+	margin-right: 10px;
+	width: 12000px;
+	height: 37ch;
+	border-radius: 19px;
+	overflow: hidden;
+	transition: transform 500ms ease;
+}
+
+.card:hover{
+	transform: scale(1.1);
+}
+
+.card-content{
+	--padding: 2.9rem;
+	padding: var(--padding);
+	background: linear-gradient(
+		hsl(0 0% 0% / 0),
+		hsl(20 0% 0% / 0.3) 20%,
+		hsl(0 0% 0% / 1)
+		);
+	transform: translateY(30%);
+	transition: transform 500ms ease;
+}
+
+.card:hover .card-content{
+	transform: translateY(0);
+}
+
+
+.card-title{
+	position: relative;
+	width: max-content;
+}
+.card-title::after{
+	content: "";
+	position: absolute;
+	height: 4px;
+	left: calc(var(--padding)*-1);
+	bottom: 0;
+	width:calc(100% + var(--padding));
+	background: white;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 500ms ease;
+}
+
+.card:hover .card-title::after{
+	transform: scaleX(1);
+}
+
+.button{
+	cursor: pointer;
+	display: inline-block;
+	color: black;
+	background: white;
+	padding: 0.1em 1em;
+	border-radius: 15px;
+}
+
+.button:hover,
+.button:focus{
+	background-color: black;
+	color: white;
+}
+
+
+
+
+.card2{
+	border-radius: 19px;
+    color: white;
+	padding: 5rem 0 0rem;
+	margin-right: 10px;
+	width: 12000px;
+	height: 37ch;
+	overflow: hidden;
+	transition: transform 500ms ease;
+}
+
+.card2:hover{
+	transform: scale(1.1);
+}
+
+.card2-content{
+	--padding: 1.5rem;
+	padding: var(--padding);
+	background: linear-gradient(
+		hsl(0 0% 0% / 0),
+		hsl(20 0% 0% / 0.3) 20%,
+		hsl(0 0% 0% / 1)
+		);
+	transform: translateY(30%);
+	transition: transform 500ms ease;
+}
+
+.card2:hover .card2-content{
+	transform: translateY(0);
+}
+
+
+.card2-title{
+	position: relative;
+	width: max-content;
+}
+.card2-title::after{
+	content: "";
+	position: absolute;
+	height: 4px;
+	left: calc(var(--padding)*-1);
+	bottom: 0;
+	width:calc(100% + var(--padding));
+	background: white;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 500ms ease;
+}
+
+.card2:hover .card2-title::after{
+	transform: scaleX(1);
+}
+
+.button2{
+	cursor: pointer;
+	display: inline-block;
+	color: black;
+	background: white;
+	padding: 0.1em 1em;
+	border-radius: 15px;
+}
+
+.button2:hover,
+.button2:focus{
+	background-color: black;
+	color: white;
+}
+
+
+.card3{
+    color: white;
+	padding: 5rem 0 0rem;
+	margin-right: 10px;
+	width: 12000px;
+	height: 37ch;
+	border-radius: 19px;
+	overflow: hidden;
+	transition: transform 500ms ease;
+}
+
+
+.card3:hover{
+	transform: scale(1.1);
+}
+
+.card3-content{
+	--padding: 1.5rem;
+	padding: var(--padding);
+	background: linear-gradient(
+		hsl(0 0% 0% / 0),
+		hsl(20 0% 0% / 0.3) 20%,
+		hsl(0 0% 0% / 1)
+		);
+	transform: translateY(30%);
+	transition: transform 500ms ease;
+}
+
+.card3:hover .card3-content{
+	transform: translateY(0);
+}
+
+
+.card3-title{
+	position: relative;
+	width: max-content;
+}
+.card3-title::after{
+	content: "";
+	position: absolute;
+	height: 4px;
+	left: calc(var(--padding)*-1);
+	bottom: 0;
+	width:calc(100% + var(--padding));
+	background: white;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 500ms ease;
+}
+
+.card3:hover .card3-title::after{
+	transform: scaleX(1);
+}
+
+.button3{
+	cursor: pointer;
+	display: inline-block;
+	color: black;
+	background: white;
+	padding: 0.1em 1em;
+	border-radius: 15px;
+}
+
+.button3:hover,
+.button3:focus{
+	background-color: black;
+	color: white;
+}
+
+.card4{
+    color: white;
+	padding: 5rem 0 0rem;
+	margin-right: 10px;
+	width: 12000px;
+	height: 37ch;
+	border-radius: 19px;
+	overflow: hidden;
+	transition: transform 500ms ease;
+}
+
+
+.card4:hover{
+	transform: scale(1.1);
+}
+
+.card4-content{
+	--padding: 2.1rem;
+	padding: var(--padding);
+	background: linear-gradient(
+		hsl(0 0% 0% / 0),
+		hsl(20 0% 0% / 0.3) 20%,
+		hsl(0 0% 0% / 1)
+		);
+	transform: translateY(30%);
+	transition: transform 500ms ease;
+}
+
+.card4:hover .card4-content{
+	transform: translateY(0);
+}
+
+
+.card4-title{
+	position: relative;
+	width: max-content;
+}
+.card4-title::after{
+	content: "";
+	position: absolute;
+	height: 4px;
+	left: calc(var(--padding)*-1);
+	bottom: 0;
+	width:calc(100% + var(--padding));
+	background: white;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 500ms ease;
+}
+
+.card4:hover .card4-title::after{
+	transform: scaleX(1);
+}
+
+.button4{
+	cursor: pointer;
+	display: inline-block;
+	color: black;
+	background: white;
+	padding: 0.1em 1em;
+	border-radius: 15px;
+}
+
+.button4:hover,
+.button4:focus{
+	background-color: black;
+	color: white;
+}
+
+
+.card4{
+    color: white;
+	padding: 5rem 0 0rem;
+	margin-right: 10px;
+	width: 12000px;
+	height: 37ch;
+	border-radius: 19px;
+	overflow: hidden;
+	transition: transform 500ms ease;
+}
+
+
+.card5:hover{
+	transform: scale(1.1);
+}
+
+.card5-content{
+	--padding: 2.1rem;
+	padding: var(--padding);
+	background: linear-gradient(
+		hsl(0 0% 0% / 0),
+		hsl(20 0% 0% / 0.3) 20%,
+		hsl(0 0% 0% / 1)
+		);
+	transform: translateY(30%);
+	transition: transform 500ms ease;
+}
+
+.card5:hover .card5-content{
+	transform: translateY(0);
+}
+
+
+.card5-title{
+	position: relative;
+	width: max-content;
+}
+.card5-title::after{
+	content: "";
+	position: absolute;
+	height: 4px;
+	left: calc(var(--padding)*-1);
+	bottom: 0;
+	width:calc(100% + var(--padding));
+	background: white;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 500ms ease;
+}
+
+.card5:hover .card5-title::after{
+	transform: scaleX(1);
+}
+
+.button5{
+	cursor: pointer;
+	display: inline-block;
+	color: black;
+	background: white;
+	padding: 0.1em 1em;
+	border-radius: 15px;
+}
+
+.button5:hover,
+.button5:focus{
+	background-color: black;
+	color: white;
+}
