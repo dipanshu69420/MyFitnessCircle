@@ -1,80 +1,148 @@
 import React from 'react';
-import './SignUpForm.css'; // Import the corresponding CSS file
+
+import '../components/SignUpForm.css'// Import the corresponding CSS file
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-const SignUp = () => {
+
+export default function SignUpForm() {
+  const [fname, setFname] = React.useState("");
+  const [lname, setLname] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [Age, setAge] = React.useState("");
+  const [number, setNumber] = React.useState("");
   const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Assuming the API endpoint for registration is http://localhost:5000/register
+    axios.post("http://localhost:5000/register", {
+      fname,
+      lname,
+      email,
+      password,
+      Age,
+      number,
+    })
+    .then((response) => {
+      console.log(response.data, "userRegister");
+      if (response.data.status === "ok") {
+        alert("Registration Successful");
+      } else {
+        alert("Something went wrong");
+      }
+    })
+    .catch((error) => {
+      console.error("Error occurred during registration:", error);
+      alert("Something went wrong");
+    });
+  };
+
   return (
     <main className="card-container slideUp-animation">
-      <div className="image-container">
+       <div className="image-container">
         <h1 className="company">
-          Fitness Freak <sup>&trade;</sup>
+          Fitness Circle <sup>&trade;</sup>
         </h1>
         <img src="" className="illustration" alt="" />
-        <p className="quote">Aee Vedya fit ho ja..!</p>
+        <p className="quote"> </p>
         <a href="#btm" className="mobile-btm-nav">
           <img src="./assets/images/dbl-arrow.png" alt="" id='image'/>
         </a>
       </div>
-      <form action="" method="">
-        <div className="form-container slideRight-animation">
-          <h1 className="form-header">Get started</h1>
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <h3 className="form-header">Sign Up</h3>
 
           <div className="input-container">
-            <label htmlFor="f-name"></label>
-            <input type="text" name="f-name" id="f-name" required />
-            <span>First name</span>
-            <div className="error"></div>
+            <label>First name</label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="First name"
+              value={fname}
+              onChange={(e) => setFname(e.target.value)}
+              required
+            />
           </div>
 
           <div className="input-container">
-            <label htmlFor="f-name"></label>
-            <input type="text" name="f-name" id="f-name" required />
-            <span>Last Name</span>
-            <div className="error"></div>
+            <label>Last name</label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Last name"
+              value={lname}
+              onChange={(e) => setLname(e.target.value)}
+              required
+            />
           </div>
 
           <div className="input-container">
-            <label htmlFor="f-name"></label>
-            <input type="text" name="f-name" id="f-name" required />
-            <span>E-Mail</span>
-            <div className="error"></div>
+            <label>Email address</label>
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Enter email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
           </div>
+
           <div className="input-container">
-            <label htmlFor="f-name"></label>
-            <input type="password" name="f-name" id="f-name" required />
-            <span>Password</span>
-            <div className="error"></div>
+            <label>Password</label>
+            <input
+              type="password"
+              className="form-control"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
           </div>
+
           <div className="input-container">
-            <label htmlFor="f-name"></label>
-            <input type="text" name="f-name" id="f-name" required />
-            <span>Number</span>
-            <div className="error"></div>
+            <label>Age</label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter age"
+              value={Age}
+              onChange={(e) => setAge(e.target.value)}
+              required
+            />
           </div>
+
           <div className="input-container">
-            <label htmlFor="f-name"></label>
-            <input type="age" name="f-name" id="f-name" required />
-            <span>Age</span>
-            <div className="error"></div>
+            <label>Phone</label>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter number"
+              value={number}
+              onChange={(e) => setNumber(e.target.value)}
+              required
+            />
           </div>
-          <div id="btm">
-            <button type="submit" className="submit-btn" style={{ backgroundColor: '#ffdb7f' }}>
-              Create Account
+
+          <div className="d-grid">
+            <button type="submit" className=".submit-btn" style={{ backgroundColor: '#ffdb7f' }}>
+              Sign Up
             </button>
-            <p className="btm-text">
-              Already have an account..? < Link
-        to="/login"
-        style={{ textDecoration: 'none', color: '#3A1212' , cursor:'pointer'}}
-      >
-        Login
-      </Link>
-            </p>
           </div>
-        </div>
-      </form>
+          <p className="btn-text">
+            Already have an account..?{' '}
+            <Link to="/login" style={{ textDecoration: 'none', color: '#3A1212', cursor: 'pointer' }}>
+              Login
+            </Link>
+          </p>
+        </form>
+      </div>
+      <div className="image-container">
+        <img src="src/assets/images/gym.jpg"/>
+      </div>
     </main>
   );
-};
-
-export default SignUp;
+}

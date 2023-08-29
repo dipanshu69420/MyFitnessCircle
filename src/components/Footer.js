@@ -17,7 +17,7 @@ const Footer = () => (
     paddingX={4}
   >
     <Typography variant="h5" sx={{ fontSize: { lg: '22px', xs: '20px' } }}>
-      Fitness Freaks
+      Fitness Circle
     </Typography>
     <div>
       <p style={{ fontWeight: 'bold', textDecorationLine: 'underline', color: 'black', display: 'inline' }}>

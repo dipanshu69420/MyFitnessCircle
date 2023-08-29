@@ -7,7 +7,7 @@ import { Navigate, useNavigate } from 'react-router-dom';
 const HeroBanner = () => {
   const navigate = useNavigate();
   return (
-  <Box position="relative" p="20px" width={"100%"} height={"650px"} color={"black"}>
+  <Box position="relative" p="20px" width={"100%"} height={"650px"} color={"transparent"}>
       <Stack 
       marginTop={"150px"}
       marginLeft={"125px"}
@@ -30,7 +30,7 @@ const HeroBanner = () => {
       <div class="card" style={{ color: 'white',marginLeft:"30px", padding: '5rem 0 0rem', maxWidth: '35ch', borderRadius: '19px', overflow: 'hidden', transition: 'transform 500ms ease' }}>
         <div class="card-content">
           <h2 class="card-title">Local Groups</h2>
-          <p class="card-body">Join Local groups nearby to be part of community and be fit together.</p>
+          <p class="card-body">Join Local groups nearby and be fit together.</p>
           <a><button class="button" onClick={() => navigate('/localgroups')}>Check out</button></a>
         </div>
       </div>

@@ -20,9 +20,10 @@ const MainPage = () => {
                 ></span>
               </h1>
               <h2 style={{ fontSize: '30px', paddingTop: '12px', color: 'white' }}>Get Started With Your Fitness Journey</h2>
-                <button type="submit" className="" style={{ backgroundColor: '#ffdb7f' , marginLeft:'150px'}} onClick={() => navigate('/signup')}>
+                {/* <button type="submit" className="" style={{ backgroundColor: '#ffdb7f' , marginLeft:'150px'}} onClick={() => navigate('/signup')}>
               Get Started
-            </button>
+            </button> */}
+              <h1 style={{paddingLeft: '32px'}}>Coming Soon</h1>
             </div>
           </div>
         </header>
