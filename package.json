@@ -1,7 +1,7 @@
 {
-  "name": "vizion",
-  "version": "0.1.0",
-  "homepage": "www.myfitnesscircle.com",
+  "name": "myfitnesscircle",
+  "version": "1.0.1",
+  "homepage": "https://www.myfitnesscircle.com",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -31,7 +31,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "debug": "npm run build && gh-pages -d build",
+    "predeply": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "android": "react-native run-android",

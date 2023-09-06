@@ -31,7 +31,7 @@ body {
     display: grid;
     grid-template-columns: calc(100% - 60%) auto;
     height: 100vh;
-    width: 360%;
+    width: 400%;
     overflow: hidden;
     background-color: white;
 }
