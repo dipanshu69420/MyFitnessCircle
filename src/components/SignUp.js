@@ -141,7 +141,7 @@ export default function SignUpForm() {
         </form>
       </div>
       <div className="image-container">
-        <img src="src/assets/images/gym.jpg"/>
+        <img src="src/assets/images/.jpg"/>
       </div>
     </main>
   );

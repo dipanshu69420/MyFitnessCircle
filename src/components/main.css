@@ -3526,7 +3526,7 @@ height: 100%;}
   
   /* header */
   #header{
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('E:\withsub_8_07\fitnessapp\src\assets\images\gym.jpg') center/cover no-repeat fixed;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../assets/images/gym.jpg') center/cover no-repeat fixed;
       justify-content: flex-start;
       align-items: flex-end;
   }
